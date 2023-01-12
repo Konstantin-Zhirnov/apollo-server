@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/netlify-lambda serve functions",
-    "build": "./node_modules/.bin/netlify-lambda build functions"
+    "build": "netlify dev"
   },
   "author": "Konstantin Zhirnov",
   "license": "ISC",
@@ -15,7 +14,6 @@
     "express": "^4.18.1",
     "express-graphql": "^0.12.0",
     "graphql": "15.8",
-    "netlify-lambda": "^2.0.15",
     "serverless-http": "^3.1.1",
     "uuid": "^8.3.2"
   }
