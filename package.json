@@ -1,0 +1,19 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Konstantin Zhirnov",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "couchbase": "^4.1.2",
+    "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "15.8",
+    "uuid": "^8.3.2"
+  }
+}
