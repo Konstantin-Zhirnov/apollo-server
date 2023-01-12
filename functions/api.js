@@ -1,18 +1,17 @@
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const serverless = require('serverless-http');
-const cors = require('cors');
+// const cors = require('cors');
 const schema = require('./schema/schema');
 
 const app = express();
-const router = express.Router();
 
-const corsOptions = {
-  origin(origin, callback) {
-    callback(null, true);
-  },
-  credentials: true
-};
+// const corsOptions = {
+//   origin(origin, callback) {
+//     callback(null, true);
+//   },
+//   credentials: true
+// };
 // app.use(cors(corsOptions));
 // const allowCrossDomain = function(req, res, next) {
 //   res.header('Access-Control-Allow-Origin', '*');
