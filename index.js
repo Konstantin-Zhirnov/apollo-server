@@ -27,6 +27,7 @@ app.use('/graphql', graphqlHTTP({
   graphiql: true
 }));
 
+
 app.listen(PORT, error => {
   error ? console.log(error) : console.log(`Server has been started! Port - ${PORT}`);
 })
