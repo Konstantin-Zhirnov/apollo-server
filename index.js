@@ -1,10 +1,11 @@
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
-const serverless = require('serverless-http');
-const cors = require('cors');
+const cors = require('cors')
 const schema = require('./schema/schema');
 
 const app = express();
+
+const PORT = process.env.PORT || 80
 
 const corsOptions = {
   origin(origin, callback) {
@@ -21,10 +22,11 @@ const allowCrossDomain = function(req, res, next) {
 }
 app.use(allowCrossDomain);
 
-app.use('/', graphqlHTTP({
+app.use('/graphql', graphqlHTTP({
   schema,
   graphiql: true
 }));
 
-
-module.exports.handler = serverless(app);
+app.listen(PORT, error => {
+  error ? console.log(error) : console.log(`Server has been started! Port - ${PORT}`);
+})
