@@ -22,7 +22,7 @@ const allowCrossDomain = function(req, res, next) {
 }
 app.use(allowCrossDomain);
 
-app.use('/graphql', graphqlHTTP({
+app.use('/.netlify/functions/api/graphql', graphqlHTTP({
   schema,
   graphiql: true
 }));
