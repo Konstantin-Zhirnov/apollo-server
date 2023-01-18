@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "netlify dev"
+    "build": "npm install"
   },
   "author": "Konstantin Zhirnov",
   "license": "ISC",
